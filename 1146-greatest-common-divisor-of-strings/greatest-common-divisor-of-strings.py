@@ -11,8 +11,6 @@ class Solution(object):
                 r=n1%n2
                 n1=n2
                 n2=r
-            gcd=n1
-
-            return(str1[:gcd])
+            return(str1[:n1])
 
         
