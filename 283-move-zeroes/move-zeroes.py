@@ -1,16 +1,13 @@
-class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+class Solution(object):
+    def moveZeroes(self, nums):
         
-        num_z=[]
-        num_nz=[]
+        non_zero=[]
+        zero=[]
         for i in range(len(nums)):
-            if(nums[i]==0):
-                num_z.append(nums[i])
-                
+            if nums[i]==0:
+                zero.append(nums[i])
             else:
-                num_nz.append(nums[i])
-        
-        nums[:]=num_nz+num_z
-            
-
+                non_zero.append(nums[i])
+        nums[:]=(non_zero+zero)
+        return (nums)
         
