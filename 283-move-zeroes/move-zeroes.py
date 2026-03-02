@@ -1,13 +1,17 @@
 class Solution(object):
     def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
         
-        non_zero=[]
-        zero=[]
-        for i in range(len(nums)):
-            if nums[i]==0:
-                zero.append(nums[i])
+        nonZero = []
+        zero = []
+       
+
+        for num in nums:
+            if num ==0:
+                zero.append(num)
             else:
-                non_zero.append(nums[i])
-        nums[:]=(non_zero+zero)
-        return (nums)
-        
+                nonZero.append(num)
+        nums[:] = nonZero + zero
